@@ -1,5 +1,7 @@
 package lavenshtein
 
+// Distance between two strings is the number of deletions, insertions, or
+// substitutions required to transform source string into target string.
 func Distance(s, t string) int {
 	a, b := []rune(s), []rune(t)
 	u, v := vectors(len(b))
