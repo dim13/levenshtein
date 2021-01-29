@@ -1,4 +1,4 @@
-package lavenshtein
+package levenshtein
 
 import "testing"
 
