@@ -24,7 +24,7 @@ func cost(a, b rune) int {
 
 func vectors(n int) ([]int, []int) {
 	u, v := make([]int, n+1), make([]int, n+1)
-	for i := 0; i <= n; i++ {
+	for i := range n + 1 {
 		u[i] = i
 	}
 	return u, v
