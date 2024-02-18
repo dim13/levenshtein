@@ -8,19 +8,14 @@ func Distance(s, t string) int {
 	for i, A := range a {
 		v[0] = i + 1
 		for j, B := range b {
-			v[j+1] = min(v[j]+1, u[j+1]+1, u[j]+cost(A, B))
+			v[j+1] = min(v[j]+1, u[j+1]+1, u[j]+cost[A == B])
 		}
 		u, v = v, u
 	}
 	return u[len(u)-1]
 }
 
-func cost(a, b rune) int {
-	if a != b {
-		return 1
-	}
-	return 0
-}
+var cost = map[bool]int{true: 0, false: 1}
 
 func vectors(n int) ([]int, []int) {
 	u, v := make([]int, n+1), make([]int, n+1)
