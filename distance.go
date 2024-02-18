@@ -8,7 +8,7 @@ func Distance(s, t string) int {
 	for i, A := range a {
 		v[0] = i + 1
 		for j, B := range b {
-			v[j+1] = min3(v[j]+1, u[j+1]+1, u[j]+cost(A, B))
+			v[j+1] = min(v[j]+1, u[j+1]+1, u[j]+cost(A, B))
 		}
 		u, v = v, u
 	}
@@ -28,15 +28,4 @@ func vectors(n int) ([]int, []int) {
 		u[i] = i
 	}
 	return u, v
-}
-
-func min3(u, v, w int) int {
-	return min(u, min(v, w))
-}
-
-func min(u, v int) int {
-	if u < v {
-		return u
-	}
-	return v
 }
