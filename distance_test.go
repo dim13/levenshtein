@@ -30,20 +30,20 @@ func TestDistance(t *testing.T) {
 		{"abc", "ac", 1},
 		{"xabxcdxxefxgx", "abcdefg", 6},
 
-		// only substitions
+		// only substitutions
 		{"a", "b", 1},
 		{"ab", "ac", 1},
 		{"abc", "axc", 1},
 		{"xabxcdxxefxgx", "1ab2cd34ef5g6", 6},
 
-		// many oprations
+		// many operations
 		{"example", "samples", 3},
 		{"sturgeon", "urgently", 6},
 		{"levenshtein", "frankenstein", 6},
 		{"distance", "difference", 5},
 		{"java was neat", "scala is great", 7},
 
-		// utf-8
+		// UTF-8
 		{"тест", "Тест", 1},
 		{"gross", "groß", 2},
 	}
