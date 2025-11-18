@@ -8,7 +8,6 @@ func Distance(a, b string) int {
 
 // DistanceSlices between two slices is the number of deletions, insertions, or
 // substitutions required to transform source slice into target slice.
-// func DistanceSlices[S ~[]E, E comparable](a, b S) int {
 func DistanceSlices[S ~[]E, E comparable](a, b S) int {
 	n := len(b) + 1
 	u, v := make([]int, n), make([]int, n)
